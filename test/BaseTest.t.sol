@@ -7,11 +7,12 @@ contract BaseTest is Test {
     address user1;
     address user2;
     address owner;
+    uint256 ownerPrivateKey;
 
     function setUp() public virtual {
         (user1,) = makeAddrAndKey("user1");
         (user2,) = makeAddrAndKey("user2");
-        (owner,) = makeAddrAndKey("owner");
+        (owner, ownerPrivateKey) = makeAddrAndKey("owner");
     }
 
     function checkSuccess() internal virtual {}
